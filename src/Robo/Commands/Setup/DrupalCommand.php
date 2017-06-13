@@ -35,7 +35,7 @@ class DrupalCommand extends BltTasks {
     $task = $this->taskDrush()
       ->drush("site-install")
       ->arg($this->getConfigValue('project.profile.name'))
-      ->rawArg("install_configure_form.update_status_module='array(FALSE,FALSE)'")
+      ->rawArg("install_configure_form.enable_update_status_module=NULL")
       ->option('site-name', $this->getConfigValue('project.human_name'))
       ->option('site-mail', $this->getConfigValue('drupal.account.mail'))
       ->option('account-name', $username, '=')
